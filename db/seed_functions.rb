@@ -11,13 +11,17 @@ class String
 end
 
 class Seed
-  def self.populate(model)
+  def self.populate(model, &block)
     display_name(model)
     clear_previous(model)
 
-    seed_start if block_given?
-    yield if block_given?
-    seed_end if block_given?
+    seed(block) if block_given?
+  end
+
+  def self.seed(seed_function)
+    print '   Seeding new Data: '
+    seed_function.call
+    puts 'Done'.green
   end
 
   def self.display_name(model)
@@ -28,14 +32,6 @@ class Seed
   def self.clear_previous(model)
     print "   Clearing old #{model}s: "
     model.destroy_all
-    puts "Done".green
-  end
-
-  def self.seed_start
-    print '   Seeding new Data: '
-  end
-
-  def self.seed_end
     puts 'Done'.green
   end
 end
