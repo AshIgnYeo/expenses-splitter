@@ -1,0 +1,22 @@
+<%= link_to 'Sign Out', destroy_user_session_path, data: {turbo_method: :delete} %>
+<hr>
+<div class="container">
+  <h2>Pending Payments</h2>
+
+  <div>
+    <h2>To Pay</h2>
+    <strong>$35</strong>
+  </div>
+
+  <div>
+    <h2>To Receive</h2>
+    <strong>$35</strong>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Events</h2>
+
+  <%= render current_user.events %>
+
+</div>

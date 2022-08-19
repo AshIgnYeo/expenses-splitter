@@ -1,0 +1,22 @@
+<div class="px-2 flex items-center">
+  <div>
+    <h3><%= event.name %></h3>
+    <div class="event-stats flex">
+
+      <div class="flex items-center">
+        <i class="fa-solid fa-user"></i>
+        <%= event.participants.count %>
+      </div>
+
+      <div class="flex items-center">
+        <i class="fa-solid fa-receipt"></i>
+        <%= event.bills.count %>
+      </div>
+    </div>
+  </div>
+
+  <div class="event-total">
+    <%= event.total %>
+  </div>
+
+</div>

@@ -5,7 +5,7 @@ require_relative 'seed_functions'
 Dir[File.dirname(__FILE__) + '/seed_parts/*.rb'].each { |file| require_relative file }
 
 # define the order that the seeds should run
-SEED_ORDER = [User, Invite, Event, Participant, Bill].freeze
+SEED_ORDER = [User, Invite, Event, Participant, Bill, Expense].freeze
 
 SEED_ORDER.each do |model|
   Seed.populate(model) { send("seed_#{model.to_s.downcase}s") }
