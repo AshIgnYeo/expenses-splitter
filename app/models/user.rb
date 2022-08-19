@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :invites, dependent: :nullify
   has_many :transfers, dependent: :destroy
-  has_many :participants
+  has_many :participants, dependent: :nullify
   has_many :shares, through: :participants
   has_many :events, through: :participants
 
