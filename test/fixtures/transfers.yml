@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1.5
+  settled: false
+  event: one
+  user: one
+  friend: one
+
+two:
+  amount: 1.5
+  settled: false
+  event: two
+  user: two
+  friend: two
