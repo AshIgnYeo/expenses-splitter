@@ -15,4 +15,8 @@ class User < ApplicationRecord
     accepted_friends = Invite.where(friend: id, accepted: true).pluck(:user_id)
     User.where(id: added_friends + accepted_friends)
   end
+
+  def name
+    "#{firstname} #{lastname}"
+  end
 end
