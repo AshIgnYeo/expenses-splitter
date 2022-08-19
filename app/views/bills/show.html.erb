@@ -1,0 +1,19 @@
+<h1 class="font-bold text-3xl"><%= @bill.name %></h1>
+<h2 class="font-bold">Items:</h2>
+<%= render @bill.expenses %>
+
+<hr>
+
+  <div class="flex">
+    <div class="w-3/5">
+      <strong>Total:</strong>
+    </div>
+
+    <div class="w-2/5">
+      <%= @bill.total %>
+    </div>
+  </div>
+
+<hr>
+
+<%= link_to "< #{@bill.event.name}", @bill.event %>

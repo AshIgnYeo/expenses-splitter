@@ -1,0 +1,10 @@
+<div class="bill flex flex-col justify-between border border-black-50 rounded px-4 py-2">
+  <h4 class="font-bold mb-2"><%= bill.name %></h4>
+  <p><%= bill.description %></p>
+
+  <div class="text-xl">
+    $<%= bill.total %>
+  </div>
+
+  <%= link_to 'Update', bill, class: 'underline text-blue-500' %>
+</div>
