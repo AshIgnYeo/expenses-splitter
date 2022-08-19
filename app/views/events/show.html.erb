@@ -4,6 +4,10 @@
 
   <hr>
 
+  <h2 class="text-2xl font-bold">Participants</h2>
+  <%= render @event.users %>
+
+
   <div class="grid grid-cols-2 gap-2 m-4">
     <%= render @event.bills%>
   </div>
