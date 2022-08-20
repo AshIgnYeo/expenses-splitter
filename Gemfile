@@ -35,6 +35,7 @@ gem "jbuilder"
 gem 'devise'
 gem 'faker'
 gem 'react-rails'
+gem 'rtesseract'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
