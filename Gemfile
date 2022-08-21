@@ -36,6 +36,9 @@ gem 'devise'
 gem 'faker'
 gem 'react-rails'
 gem 'rtesseract'
+gem 'simple_form', github: 'heartcombo/simple_form'
+
+gem "aws-sdk-s3", require: false
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

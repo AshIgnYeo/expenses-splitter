@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Create new Bill</h1>
+
+  <%= simple_form_for [@event, @bill] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :gst, input_html: { value: '7' } %>
+    <%= f.input :service_charge, input_html: { value: '10' } %>
+    <%= f.input :receipt %>
+    <%= f.submit %>
+  <% end %>
+
+</div>
